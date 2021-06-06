@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrudApp.Views.AddProduct">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <Label Text="Name" FontAttributes="Bold" TextColor="Black"/>
+            <Entry Placeholder="ProductName" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="name"/>
+            <Label Text="Description" FontAttributes="Bold" TextColor="Black"/>
+            <Entry Placeholder="Description" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="Description"/>
+            <Label Text="Prix" FontAttributes="Bold" TextColor="Black"/>
+            <Entry Placeholder="Prix" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="Prix" 
+                   Keyboard="Numeric"/>
+
+            <Button Text="Save" HorizontalOptions="FillAndExpand" 
+                    BackgroundColor="Maroon" TextColor="White" x:Name="saveBtn" Clicked="SaveProduct"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

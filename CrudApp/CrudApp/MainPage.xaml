@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CrudApp"
+             x:Class="CrudApp.MainPage" Title="Products List">
+
+    <StackLayout Padding="5">
+        <Button Text="Add Employee" HorizontalOptions="FillAndExpand" 
+                BackgroundColor="Orange" TextColor="Black" Clicked="AddProduct"/>
+
+        <ListView x:Name="EmployeeList" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" IsDestructive="true" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Spacing="2">
+                            <Label Text="{Binding Name,StringFormat='Name:{0:F0}'}" FontSize="Small" FontAttributes="Bold"/>
+                            <Label Text="{Binding Description,StringFormat='Description:{0:F0}'}" FontSize="Small" FontAttributes="None"/>
+                            <Label Text="{Binding prix,StringFormat='prix:{0:F0}'}" FontSize="Small" FontAttributes="None"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
